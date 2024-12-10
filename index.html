@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+    <!-- Bootstraps -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- GoogleFont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Lilita+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- Title -->
+    <title>TechnoBlast</title>
+    <link rel="icon" href="images/logo.png">
+  </head>
+<body>
+
+    <header>
+      <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26" ><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#item">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul>
+          <li><a href="#"><img src="images/logo-nobg.png" alt="" height="175px"></a></li>
+          <li class="hideOnMobile"><a href="#hero">Home</a></li>
+          <li class="hideOnMobile"><a href="#about">About</a></li>
+          <li class="hideOnMobile"><a href="#item">Products</a></li>
+          <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+          <li class="menu-button" onclick=showSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+        </ul>
+      </nav>
+    </header> 
+   
+    <main>
+
+        <section id="hero" class="hero grid-main">
+            <div class="left">
+                <h1 class="hero-h1">Build Better, Perform Faster, Only with TechnoBlast!</h1>
+                <p class="hero-p">Your Ultimate Source for Quality Computer Parts.</p>
+                <button class="hero-button" role="button"><a href="#item">DISCOVER MORE!</a></button>
+            </div>
+            <img class="girlwithcomputer" src="images/girlwithcomputer.png" alt="Girl with Computer">
+        </section>
+
+        <section id="about" class="vs-ms grid-main">
+          <div class="boywithcomputer">
+            <img src="images/about-image.png" alt="boywithcomputer">
+          </div>
+          <div class="about-us">
+            <h1>About TechnoBlast!</h1>
+            <p>Welcome to TechnoBlast, your trusted source for high-quality computer parts! We are dedicated to providing the best hardware solutions for gamers, professionals, and tech enthusiasts. With a focus on reliability and innovation, our mission is to help you build the computer of your dreams. Whether you're assembling your first PC or upgrading your current setup, we’ve got you covered.</p>
+          </div>
+          <div class="vision">
+              <h1>VISION <i class="fa-solid fa-eye"></i> </h1>
+              <p>
+                  To be the trusted leader in providing top-quality computer components, empowering customers to achieve excellence in technology and innovation.
+              </p>
+          </div>
+          <div class="mission">
+              <h1>MISSION <i class="fa-solid fa-bullseye"></i> </h1>
+              <p>
+                  At TechnoBlast, our mission is to deliver premium computer parts at competitive prices, ensuring customer satisfaction through expert advice, exceptional service, and a commitment to supporting every tech enthusiast's journey to build, upgrade, or repair their devices.
+              </p> 
+          </div>
+        </section>
+
+        <section id="item" class="item swiper">
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times; <h1 style="color: black;">THANK YOU! </h1></span> 
+                <hr>
+                <form method="POST" id="form">
+                  <input type="hidden" name="access_key" value="ea2f6b41-4cdb-41f7-8d63-7270e7e9d410">
+                  <label for="order">Enter order name</label> <br>
+                  <input id="order" type="text" name="Order" required placeholder="Your order" autocomplete="on"> <br>
+                  <label for="order">Enter order quantity</label> <br>
+                  <input type="number" name="Quantity" required placeholder="How many?" autocomplete="on"> <br>    
+                  <label for="address">Enter your order location</label> <br>
+                  <textarea id="address" name="Address" required placeholder="Your order Address" rows="4" autocomplete="on"></textarea> <br> <br>
+                  <button type="submit">ORDER NOW!</button> <br> <br>
+                  <div id="result"></div>
+                </form>
+              </div>
+            </div>
+
+            <h1 class="item-h1">Our Products</h1> <br>
+            <hr class="hr">
+            <br>
+            <div class="slide-container">
+              <div class="card-wrapper swiper-wrapper">
+
+                <div class="card swiper-slide">
+                  <div class="image-box">
+                    <img src="images/C24-1700-ph-300x300.png" alt="" />
+                  </div>
+                  <div class="details">
+                    <div class="discription">
+                      <h2 class="name">MONITOR</h2>
+                      <p class="price">php 15,000</p>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button class="myBtn">Buy now!</button>
+                  </div>
+                </div>
+
+                <div class="card swiper-slide">
+                  <div class="image-box">
+                    <img src="images/cmp510_webpage_1175x1120_imagewithtext-3-imageleftorright-300x300.png" alt="" />
+                  </div>
+                  <div class="details">
+                    <div class="discription">
+                      <h2 class="name">SYSTEM UNIT</h2>
+                      <p class="price">php 9,999</p>
+                    </div>
+                     <!-- Button trigger modal -->
+                     <button class="myBtn">Buy now!</button>
+                  </div>
+                </div>
+
+                <div class="card swiper-slide">
+                  <div class="image-box">
+                    <img src="images/BTZ-Flash-Deals-300x300.webp" alt="" />
+                  </div>
+                  <div class="details">
+                    <div class="discription">
+                      <h2 class="name">TECHNO-DEALS</h2>
+                      <p class="price">php 40,000</p>
+                    </div>
+                     <!-- Button trigger modal -->
+                     <button class="myBtn">Buy now!</button>
+
+                  </div>
+                </div>
+
+                <div class="card swiper-slide">
+                  <div class="image-box">
+                    <img src="images/cs-107-v1-infographic700x700px-01-00-6551c21f41af3-300x300.png" alt="" />
+                  </div>
+                  <div class="details">
+                    <div class="discription">
+                      <h2 class="name">UNIT CASE</h2>
+                      <p class="price">php 6,999</p>
+                    </div>
+                     <!-- Button trigger modal -->
+                     <button class="myBtn">Buy now!</button>
+                  </div>
+                </div>
+
+                <div class="card swiper-slide">
+                  <div class="image-box">
+                    <img src="images/bangalore-1-450x450.webp" alt="" />
+                  </div>
+                  <div class="details">
+                    <div class="discription">
+                      <h2 class="name">TECHNO-DEALS</h2>
+                      <p class="price">php 15,999</p>
+                    </div>
+                     <!-- Button trigger modal -->
+                     <button class="myBtn">Buy now!</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </section>
+ 
+        <br>
+        
+        <section id="contact" class="contact grid-main">
+        
+          <div class="getintouch-paragraph grid-main">
+            <img class="contact-image" src="images/getintouch.gif" alt="">
+            <div class="contact-info">
+              <h1 class="contact-h1">Get in Touch!</h1>
+              <p>We’d love to hear from you! Whether you have questions about our products or need assistance with your purchase, our team is here to help. Reach out to us through the contact details below, or fill out the form to send us a message.</p>
+            </div>
+
+            <div class="getintouch-form grid-main">
+              <div class="contact-soc">
+                <span><i class="fa-solid fa-envelope"></i> technoblast@gmail.com</span> <br>
+                <span><i class="fa-brands fa-square-facebook"></i> TechnoBlast</span> <br>
+                <span><i class="fa-brands fa-instagram"></i> TechnoBlast</span> <br>
+                <img src="images/bunny.png" alt="bunny" height="140px">
+              </div>
+              <div class="contact-form">
+                <form method="POST" id="form">
+                  <input type="hidden" name="access_key" value="ea2f6b41-4cdb-41f7-8d63-7270e7e9d410">
+                  <label for="contact-email">Enter Email</label>
+                  <input id="contact-email"  class="contact-email" type="email" placeholder="Enter your email"> <br>
+                  <label for="contact-message">Enter Message</label>
+                  <textarea id="contact-message"  class="contact-message" name="contact-message" required placeholder="Your message"></textarea> <br>
+                  <button type="submit">SEND MESSAGE!</button>  <br> <br>
+                  <div id="result"></div>
+                </form>            
+              </div>
+             
+            </div>
+
+          </div>
+        </section>
+    
+    </main>
+
+    <footer>
+      <div class="footer-container grid-main">
+        <div class="footer-logo">
+          <a href="#hero">
+            <img src="images/logo-nobg.png" alt="TechnoBlast Logo" />
+          </a>
+        </div>
+        <div class="footer-text">
+          <h4>TechnoBlast</h4>
+          <p>© 2024 TechnoBlast. Empowering your tech needs with top-quality computer parts and exceptional service. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
